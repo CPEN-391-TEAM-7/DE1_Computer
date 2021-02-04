@@ -1,0 +1,24 @@
+
+WORK > DEFAULT
+DEFAULT:               ./libraries/work/                 
+work:                  ./libraries/work/                 
+System_PLL:            ./libraries/System_PLL/           
+SysID:                 ./libraries/SysID/                
+Slider_Switches:       ./libraries/Slider_Switches/      
+SDRAM:                 ./libraries/SDRAM/                
+PushButtons:           ./libraries/PushButtons/          
+Onchip_SRAM:           ./libraries/Onchip_SRAM/          
+LEDS:                  ./libraries/LEDS/                 
+JTAG_UART_For_ARM0:    ./libraries/JTAG_UART_For_ARM0/   
+JTAG_To_FPGA_Bridge:   ./libraries/JTAG_To_FPGA_Bridge/  
+Interval_Timer:        ./libraries/Interval_Timer/       
+HEX0_1:                ./libraries/HEX0_1/               
+ARM_A9_HPS:            ./libraries/ARM_A9_HPS/           
+altera_ver:            ./libraries/altera_ver/           
+lpm_ver:               ./libraries/lpm_ver/              
+sgate_ver:             ./libraries/sgate_ver/            
+altera_mf_ver:         ./libraries/altera_mf_ver/        
+altera_lnsim_ver:      ./libraries/altera_lnsim_ver/     
+cyclonev_ver:          ./libraries/cyclonev_ver/         
+cyclonev_hssi_ver:     ./libraries/cyclonev_hssi_ver/    
+cyclonev_pcie_hip_ver: ./libraries/cyclonev_pcie_hip_ver/

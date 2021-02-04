@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/CPEN391_Computer_System_PLL.v"
+   type="VERILOG"
+   library="System_PLL" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_SysID.v"
+   type="VERILOG"
+   library="SysID" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_Slider_Switches.v"
+   type="VERILOG"
+   library="Slider_Switches" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_SDRAM.v"
+   type="VERILOG"
+   library="SDRAM" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_SDRAM_test_component.v"
+   type="VERILOG"
+   library="SDRAM" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_PushButtons.v"
+   type="VERILOG"
+   library="PushButtons" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_Onchip_SRAM.hex"
+   type="HEX"
+   library="Onchip_SRAM" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_Onchip_SRAM.v"
+   type="VERILOG"
+   library="Onchip_SRAM" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_LEDS.v"
+   type="VERILOG"
+   library="LEDS" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_JTAG_UART_For_ARM0.v"
+   type="VERILOG"
+   library="JTAG_UART_For_ARM0" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_JTAG_To_FPGA_Bridge.v"
+   type="VERILOG"
+   library="JTAG_To_FPGA_Bridge" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_Interval_Timer.v"
+   type="VERILOG"
+   library="Interval_Timer" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_HEX0_1.v"
+   type="VERILOG"
+   library="HEX0_1" />
+ <file
+   path="simulation/submodules/CPEN391_Computer_ARM_A9_HPS.v"
+   type="VERILOG"
+   library="ARM_A9_HPS" />
+ <file path="simulation/CPEN391_Computer.v" type="VERILOG" />
+ <topLevel name="CPEN391_Computer" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="CPEN391_Computer.ARM_A9_HPS"
+   modelPath="CPEN391_Computer.ARM_A9_HPS" />
+ <modelMap
+   controllerPath="CPEN391_Computer.ARM_A9_HPS.fpga_interfaces"
+   modelPath="CPEN391_Computer.ARM_A9_HPS.fpga_interfaces" />
+ <modelMap
+   controllerPath="CPEN391_Computer.ARM_A9_HPS.hps_io"
+   modelPath="CPEN391_Computer.ARM_A9_HPS.hps_io" />
+ <modelMap
+   controllerPath="CPEN391_Computer.Onchip_SRAM"
+   modelPath="CPEN391_Computer.Onchip_SRAM" />
+</simPackage>

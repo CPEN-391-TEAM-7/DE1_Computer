@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Feb 04 12:59:47 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : CPEN391_Computer
+Top-level Entity Name : MyComputer_Verilog
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 4,991 / 32,070 ( 16 % )
+Total registers : 6629
+Total pins : 309 / 457 ( 68 % )
+Total virtual pins : 0
+Total block memory bits : 35,968 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 11 / 397 ( 3 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 1 / 4 ( 25 % )
