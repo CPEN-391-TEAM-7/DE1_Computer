@@ -4,42 +4,42 @@ Timing Analyzer Summary
 
 Type  : Slow 1100mV 85C Model Setup 'clk_dram'
 Slack : -3.301
-TNS   : -116.012
+TNS   : -115.852
 
 Type  : Slow 1100mV 85C Model Setup 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 1.730
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 7.680
+Slack : 8.515
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 9.905
+Slack : 9.512
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 12.145
+Slack : 9.872
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : -3.681
-TNS   : -57.458
+TNS   : -57.375
 
 Type  : Slow 1100mV 85C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.143
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.270
+Slack : 0.349
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 4.648
+Slack : 6.119
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk_dram'
-Slack : 9.044
+Slack : 9.049
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -47,23 +47,23 @@ Slack : 3.375
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 10.775
+Slack : 11.656
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 14.656
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.442
+Slack : 14.489
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.470
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.556
+TNS   : 0.000
+
 Type  : Slow 1100mV 85C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.557
+Slack : 0.559
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -83,7 +83,7 @@ Slack : 8.762
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.977
+Slack : 8.865
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
@@ -91,47 +91,47 @@ Slack : 9.851
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.463
+Slack : 15.412
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clk_dram'
 Slack : -3.061
-TNS   : -107.279
+TNS   : -107.102
 
 Type  : Slow 1100mV 0C Model Setup 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 1.727
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 8.114
+Slack : 8.835
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 10.073
+Slack : 9.648
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 12.167
+Slack : 9.998
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : -3.984
-TNS   : -62.273
+TNS   : -62.178
 
 Type  : Slow 1100mV 0C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.162
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.241
+Slack : 0.364
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 4.720
+Slack : 6.162
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk_dram'
-Slack : 8.896
+Slack : 8.900
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -139,23 +139,23 @@ Slack : 3.468
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 11.191
+Slack : 11.862
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 14.709
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.448
+Slack : 14.573
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.460
 TNS   : 0.000
 
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.500
+TNS   : 0.000
+
 Type  : Slow 1100mV 0C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.514
+Slack : 0.515
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -171,11 +171,11 @@ Slack : 1.000
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 8.741
+Slack : 8.742
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.951
+Slack : 8.857
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
@@ -183,7 +183,7 @@ Slack : 9.818
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.406
+Slack : 15.412
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'clk_dram'
@@ -195,35 +195,35 @@ Slack : 2.110
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 9.786
+Slack : 9.781
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 12.757
+Slack : 12.560
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 15.006
+Slack : 13.267
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : -1.652
-TNS   : -25.472
+TNS   : -25.424
 
 Type  : Fast 1100mV 85C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.084
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.110
+Slack : 0.157
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 2.778
+Slack : 3.896
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk_dram'
-Slack : 5.101
+Slack : 5.104
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -231,19 +231,19 @@ Slack : 3.727
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 13.282
+Slack : 15.183
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 15.738
+Slack : 15.624
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.203
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.293
+Slack : 0.294
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -262,12 +262,12 @@ Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_
 Slack : 1.000
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 8.882
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.804
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.894
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.882
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
@@ -275,7 +275,7 @@ Slack : 9.909
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.371
+Slack : 15.354
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk_dram'
@@ -287,35 +287,35 @@ Slack : 2.110
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 10.229
+Slack : 10.231
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 13.263
+Slack : 13.076
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 15.298
+Slack : 13.795
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : -2.101
-TNS   : -32.630
-
-Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.069
-TNS   : 0.000
+TNS   : -32.584
 
 Type  : Fast 1100mV 0C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.077
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.136
+TNS   : 0.000
+
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 2.652
+Slack : 3.676
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk_dram'
-Slack : 4.779
+Slack : 4.781
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -323,19 +323,19 @@ Slack : 3.825
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 14.158
+Slack : 15.397
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 15.916
+Slack : 15.834
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.208
+Slack : 0.220
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.266
+Slack : 0.267
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -355,7 +355,7 @@ Slack : 1.000
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.843
+Slack : 8.781
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
@@ -367,7 +367,7 @@ Slack : 9.906
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.341
+Slack : 15.355
 TNS   : 0.000
 
 ------------------------------------------------------------

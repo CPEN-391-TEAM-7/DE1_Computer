@@ -137,9 +137,6 @@ module MyComputer_Verilog (
 	 wire unsigned [7:0] Temp_hex2_3;
 	 wire unsigned [7:0] Temp_hex4_5;
 
-	 // used to remove LEDR from register
-	 wire unsigned [9:0] blank;
-
 	 wire unsigned [1:0] Temp_SDRAM_DQM;
 	 
 	 // TEMP WIRES TO CONNECT TO BRIDGE FROM QSYS
@@ -228,7 +225,7 @@ module MyComputer_Verilog (
 				.hps_io_hps_io_gpio_inst_GPIO53  (HPS_LED),  							//                     .hps_io_gpio_inst_GPIO53
 				.hps_io_hps_io_gpio_inst_GPIO54  (HPS_KEY),  							//                     .hps_io_gpio_inst_GPIO54
 				.hps_io_hps_io_gpio_inst_GPIO61  (HPS_GSENSOR_INT),  					//                     .hps_io_gpio_inst_GPIO61
-				.leds_export                     (blank),                     		//                 leds.export
+				.leds_export                     (LEDR),                     		//                 leds.export
 				.memory_mem_a                    (HPS_DDR3_ADDR),                 //               memory.mem_a
 				.memory_mem_ba                   (HPS_DDR3_BA),                   //                     .mem_ba
 				.memory_mem_ck                   (HPS_DDR3_CK_P),                 //                     .mem_ck
@@ -316,7 +313,7 @@ module MyComputer_Verilog (
 				.Display1(HEX5)		// output of the component connect to HEX displays 4 and 5 on the DE1
 			);	
 
-			assign WIFI_RST_n = KEY[0];
+			assign WIFI_RST_n = KEY[0] & pio_wifi_reset;
 			assign WIFI_EN = 1'b1;
 
 			always@(posedge CLOCK_50)
@@ -338,9 +335,6 @@ module MyComputer_Verilog (
 
 			//Wifi TX,     physical pin 18, digital pin 15 WARNING MAY BE BACKWARDS!
 			assign GPIO_1[15] = WIFI_UART0_TX;
-
-			assign LEDR[9] = WIFI_UART0_TX;
-			assign LEDR[8] = WIFI_UART0_RX;
 
 
 endmodule
