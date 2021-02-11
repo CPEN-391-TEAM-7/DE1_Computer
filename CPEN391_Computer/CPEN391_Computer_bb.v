@@ -102,7 +102,9 @@ module CPEN391_Computer (
 	wifi_interface_txd,
 	wifi_interface_cts_n,
 	wifi_interface_rts_n,
-	wifi_reset_export);	
+	wifi_reset_export,
+	bluetooth_interface_rxd,
+	bluetooth_interface_txd);	
 
 	output	[7:0]	hex0_1_export;
 	output	[7:0]	hex2_3_export;
@@ -207,4 +209,6 @@ module CPEN391_Computer (
 	input		wifi_interface_cts_n;
 	output		wifi_interface_rts_n;
 	output		wifi_reset_export;
+	input		bluetooth_interface_rxd;
+	output		bluetooth_interface_txd;
 endmodule

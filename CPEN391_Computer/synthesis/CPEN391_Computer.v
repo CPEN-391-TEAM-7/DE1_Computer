@@ -4,6 +4,8 @@
 
 `timescale 1 ps / 1 ps
 module CPEN391_Computer (
+		input  wire        bluetooth_interface_rxd,         //  bluetooth_interface.rxd
+		output wire        bluetooth_interface_txd,         //                     .txd
 		output wire [7:0]  hex0_1_export,                   //               hex0_1.export
 		output wire [7:0]  hex2_3_export,                   //               hex2_3.export
 		output wire [7:0]  hex4_5_export,                   //               hex4_5.export
@@ -109,7 +111,7 @@ module CPEN391_Computer (
 		output wire        wifi_reset_export                //           wifi_reset.export
 	);
 
-	wire         system_pll_sys_clk_clk;                                             // System_PLL:sys_clk_clk -> [ARM_A9_HPS:f2h_axi_clk, ARM_A9_HPS:h2f_axi_clk, ARM_A9_HPS:h2f_lw_axi_clk, HEX0_1:clk, HEX2_3:clk, HEX4_5:clk, IO_Bridge:clk, Interval_Timer:clk, JTAG_To_FPGA_Bridge:clk_clk, JTAG_To_HPS_Bridge:clk_clk, JTAG_UART_For_ARM0:clk, JTAG_UART_For_ARM1:clk, LEDS:clk, Onchip_SRAM:clk, PushButtons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, bit_flipper_0:clock, mm_interconnect_0:System_PLL_sys_clk_clk, mm_interconnect_1:System_PLL_sys_clk_clk, pio_wifi_reset:clk, rst_controller:clk, rst_controller_003:clk, wifi_uart_0:clk]
+	wire         system_pll_sys_clk_clk;                                             // System_PLL:sys_clk_clk -> [ARM_A9_HPS:f2h_axi_clk, ARM_A9_HPS:h2f_axi_clk, ARM_A9_HPS:h2f_lw_axi_clk, HEX0_1:clk, HEX2_3:clk, HEX4_5:clk, IO_Bridge:clk, Interval_Timer:clk, JTAG_To_FPGA_Bridge:clk_clk, JTAG_To_HPS_Bridge:clk_clk, JTAG_UART_For_ARM0:clk, JTAG_UART_For_ARM1:clk, LEDS:clk, Onchip_SRAM:clk, PushButtons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, bit_flipper_0:clock, bluetooth_uart:clk, mm_interconnect_0:System_PLL_sys_clk_clk, mm_interconnect_1:System_PLL_sys_clk_clk, pio_wifi_reset:clk, rst_controller:clk, rst_controller_003:clk, wifi_uart_0:clk]
 	wire   [1:0] arm_a9_hps_h2f_axi_master_awburst;                                  // ARM_A9_HPS:h2f_AWBURST -> mm_interconnect_0:ARM_A9_HPS_h2f_axi_master_awburst
 	wire   [3:0] arm_a9_hps_h2f_axi_master_arlen;                                    // ARM_A9_HPS:h2f_ARLEN -> mm_interconnect_0:ARM_A9_HPS_h2f_axi_master_arlen
 	wire   [7:0] arm_a9_hps_h2f_axi_master_wstrb;                                    // ARM_A9_HPS:h2f_WSTRB -> mm_interconnect_0:ARM_A9_HPS_h2f_axi_master_wstrb
@@ -265,6 +267,13 @@ module CPEN391_Computer (
 	wire   [1:0] mm_interconnect_0_pio_wifi_reset_s1_address;                        // mm_interconnect_0:pio_wifi_reset_s1_address -> pio_wifi_reset:address
 	wire         mm_interconnect_0_pio_wifi_reset_s1_write;                          // mm_interconnect_0:pio_wifi_reset_s1_write -> pio_wifi_reset:write_n
 	wire  [31:0] mm_interconnect_0_pio_wifi_reset_s1_writedata;                      // mm_interconnect_0:pio_wifi_reset_s1_writedata -> pio_wifi_reset:writedata
+	wire         mm_interconnect_0_bluetooth_uart_s1_chipselect;                     // mm_interconnect_0:bluetooth_uart_s1_chipselect -> bluetooth_uart:chipselect
+	wire  [15:0] mm_interconnect_0_bluetooth_uart_s1_readdata;                       // bluetooth_uart:readdata -> mm_interconnect_0:bluetooth_uart_s1_readdata
+	wire   [2:0] mm_interconnect_0_bluetooth_uart_s1_address;                        // mm_interconnect_0:bluetooth_uart_s1_address -> bluetooth_uart:address
+	wire         mm_interconnect_0_bluetooth_uart_s1_read;                           // mm_interconnect_0:bluetooth_uart_s1_read -> bluetooth_uart:read_n
+	wire         mm_interconnect_0_bluetooth_uart_s1_begintransfer;                  // mm_interconnect_0:bluetooth_uart_s1_begintransfer -> bluetooth_uart:begintransfer
+	wire         mm_interconnect_0_bluetooth_uart_s1_write;                          // mm_interconnect_0:bluetooth_uart_s1_write -> bluetooth_uart:write_n
+	wire  [15:0] mm_interconnect_0_bluetooth_uart_s1_writedata;                      // mm_interconnect_0:bluetooth_uart_s1_writedata -> bluetooth_uart:writedata
 	wire         mm_interconnect_0_jtag_uart_for_arm0_avalon_jtag_slave_chipselect;  // mm_interconnect_0:JTAG_UART_For_ARM0_avalon_jtag_slave_chipselect -> JTAG_UART_For_ARM0:av_chipselect
 	wire  [31:0] mm_interconnect_0_jtag_uart_for_arm0_avalon_jtag_slave_readdata;    // JTAG_UART_For_ARM0:av_readdata -> mm_interconnect_0:JTAG_UART_For_ARM0_avalon_jtag_slave_readdata
 	wire         mm_interconnect_0_jtag_uart_for_arm0_avalon_jtag_slave_waitrequest; // JTAG_UART_For_ARM0:av_waitrequest -> mm_interconnect_0:JTAG_UART_For_ARM0_avalon_jtag_slave_waitrequest
@@ -330,10 +339,11 @@ module CPEN391_Computer (
 	wire         irq_mapper_receiver2_irq;                                           // JTAG_UART_For_ARM0:av_irq -> irq_mapper:receiver2_irq
 	wire         irq_mapper_receiver3_irq;                                           // Interval_Timer:irq -> irq_mapper:receiver3_irq
 	wire         irq_mapper_receiver4_irq;                                           // wifi_uart_0:irq -> irq_mapper:receiver4_irq
+	wire         irq_mapper_receiver5_irq;                                           // bluetooth_uart:irq -> irq_mapper:receiver5_irq
 	wire  [31:0] arm_a9_hps_f2h_irq0_irq;                                            // irq_mapper:sender_irq -> ARM_A9_HPS:f2h_irq_p0
 	wire         irq_mapper_001_receiver0_irq;                                       // JTAG_UART_For_ARM1:av_irq -> irq_mapper_001:receiver0_irq
 	wire  [31:0] arm_a9_hps_f2h_irq1_irq;                                            // irq_mapper_001:sender_irq -> ARM_A9_HPS:f2h_irq_p1
-	wire         rst_controller_reset_out_reset;                                     // rst_controller:reset_out -> [HEX0_1:reset_n, HEX2_3:reset_n, HEX4_5:reset_n, IO_Bridge:reset, Interval_Timer:reset_n, JTAG_UART_For_ARM0:rst_n, JTAG_UART_For_ARM1:rst_n, LEDS:reset_n, Onchip_SRAM:reset, PushButtons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, bit_flipper_0:reset_n, mm_interconnect_0:JTAG_To_FPGA_Bridge_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_0:SDRAM_reset_reset_bridge_in_reset_reset, mm_interconnect_1:JTAG_To_HPS_Bridge_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:JTAG_To_HPS_Bridge_master_translator_reset_reset_bridge_in_reset_reset, pio_wifi_reset:reset_n, rst_translator:in_reset, wifi_uart_0:reset_n]
+	wire         rst_controller_reset_out_reset;                                     // rst_controller:reset_out -> [HEX0_1:reset_n, HEX2_3:reset_n, HEX4_5:reset_n, IO_Bridge:reset, Interval_Timer:reset_n, JTAG_UART_For_ARM0:rst_n, JTAG_UART_For_ARM1:rst_n, LEDS:reset_n, Onchip_SRAM:reset, PushButtons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, bit_flipper_0:reset_n, bluetooth_uart:reset_n, mm_interconnect_0:JTAG_To_FPGA_Bridge_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_0:SDRAM_reset_reset_bridge_in_reset_reset, mm_interconnect_1:JTAG_To_HPS_Bridge_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:JTAG_To_HPS_Bridge_master_translator_reset_reset_bridge_in_reset_reset, pio_wifi_reset:reset_n, rst_translator:in_reset, wifi_uart_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;                                 // rst_controller:reset_req -> [Onchip_SRAM:reset_req, rst_translator:reset_req_in]
 	wire         arm_a9_hps_h2f_reset_reset;                                         // ARM_A9_HPS:h2f_rst_n -> [rst_controller:reset_in0, rst_controller_001:reset_in0, rst_controller_002:reset_in0, rst_controller_003:reset_in0]
 	wire         system_pll_reset_source_reset;                                      // System_PLL:reset_source_reset -> [rst_controller:reset_in1, rst_controller_001:reset_in1, rst_controller_002:reset_in1]
@@ -767,6 +777,21 @@ module CPEN391_Computer (
 		.clock   (system_pll_sys_clk_clk)                                    //          clock.clk
 	);
 
+	CPEN391_Computer_bluetooth_uart bluetooth_uart (
+		.clk           (system_pll_sys_clk_clk),                            //                 clk.clk
+		.reset_n       (~rst_controller_reset_out_reset),                   //               reset.reset_n
+		.address       (mm_interconnect_0_bluetooth_uart_s1_address),       //                  s1.address
+		.begintransfer (mm_interconnect_0_bluetooth_uart_s1_begintransfer), //                    .begintransfer
+		.chipselect    (mm_interconnect_0_bluetooth_uart_s1_chipselect),    //                    .chipselect
+		.read_n        (~mm_interconnect_0_bluetooth_uart_s1_read),         //                    .read_n
+		.write_n       (~mm_interconnect_0_bluetooth_uart_s1_write),        //                    .write_n
+		.writedata     (mm_interconnect_0_bluetooth_uart_s1_writedata),     //                    .writedata
+		.readdata      (mm_interconnect_0_bluetooth_uart_s1_readdata),      //                    .readdata
+		.rxd           (bluetooth_interface_rxd),                           // external_connection.export
+		.txd           (bluetooth_interface_txd),                           //                    .export
+		.irq           (irq_mapper_receiver5_irq)                           //                 irq.irq
+	);
+
 	CPEN391_Computer_pio_wifi_reset pio_wifi_reset (
 		.clk        (system_pll_sys_clk_clk),                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
@@ -885,6 +910,13 @@ module CPEN391_Computer (
 		.bit_flipper_0_avalon_slave_0_read                                     (mm_interconnect_0_bit_flipper_0_avalon_slave_0_read),                //                                                                .read
 		.bit_flipper_0_avalon_slave_0_readdata                                 (mm_interconnect_0_bit_flipper_0_avalon_slave_0_readdata),            //                                                                .readdata
 		.bit_flipper_0_avalon_slave_0_writedata                                (mm_interconnect_0_bit_flipper_0_avalon_slave_0_writedata),           //                                                                .writedata
+		.bluetooth_uart_s1_address                                             (mm_interconnect_0_bluetooth_uart_s1_address),                        //                                               bluetooth_uart_s1.address
+		.bluetooth_uart_s1_write                                               (mm_interconnect_0_bluetooth_uart_s1_write),                          //                                                                .write
+		.bluetooth_uart_s1_read                                                (mm_interconnect_0_bluetooth_uart_s1_read),                           //                                                                .read
+		.bluetooth_uart_s1_readdata                                            (mm_interconnect_0_bluetooth_uart_s1_readdata),                       //                                                                .readdata
+		.bluetooth_uart_s1_writedata                                           (mm_interconnect_0_bluetooth_uart_s1_writedata),                      //                                                                .writedata
+		.bluetooth_uart_s1_begintransfer                                       (mm_interconnect_0_bluetooth_uart_s1_begintransfer),                  //                                                                .begintransfer
+		.bluetooth_uart_s1_chipselect                                          (mm_interconnect_0_bluetooth_uart_s1_chipselect),                     //                                                                .chipselect
 		.HEX0_1_s1_address                                                     (mm_interconnect_0_hex0_1_s1_address),                                //                                                       HEX0_1_s1.address
 		.HEX0_1_s1_write                                                       (mm_interconnect_0_hex0_1_s1_write),                                  //                                                                .write
 		.HEX0_1_s1_readdata                                                    (mm_interconnect_0_hex0_1_s1_readdata),                               //                                                                .readdata
@@ -1032,6 +1064,7 @@ module CPEN391_Computer (
 		.receiver2_irq (irq_mapper_receiver2_irq), // receiver2.irq
 		.receiver3_irq (irq_mapper_receiver3_irq), // receiver3.irq
 		.receiver4_irq (irq_mapper_receiver4_irq), // receiver4.irq
+		.receiver5_irq (irq_mapper_receiver5_irq), // receiver5.irq
 		.sender_irq    (arm_a9_hps_f2h_irq0_irq)   //    sender.irq
 	);
 

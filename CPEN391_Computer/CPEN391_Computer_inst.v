@@ -101,6 +101,8 @@
 		.wifi_interface_txd              (<connected-to-wifi_interface_txd>),              //                     .txd
 		.wifi_interface_cts_n            (<connected-to-wifi_interface_cts_n>),            //                     .cts_n
 		.wifi_interface_rts_n            (<connected-to-wifi_interface_rts_n>),            //                     .rts_n
-		.wifi_reset_export               (<connected-to-wifi_reset_export>)                //           wifi_reset.export
+		.wifi_reset_export               (<connected-to-wifi_reset_export>),               //           wifi_reset.export
+		.bluetooth_interface_rxd         (<connected-to-bluetooth_interface_rxd>),         //  bluetooth_interface.rxd
+		.bluetooth_interface_txd         (<connected-to-bluetooth_interface_txd>)          //                     .txd
 	);
 

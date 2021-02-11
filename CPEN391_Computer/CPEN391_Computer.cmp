@@ -1,5 +1,7 @@
 	component CPEN391_Computer is
 		port (
+			bluetooth_interface_rxd         : in    std_logic                     := 'X';             -- rxd
+			bluetooth_interface_txd         : out   std_logic;                                        -- txd
 			hex0_1_export                   : out   std_logic_vector(7 downto 0);                     -- export
 			hex2_3_export                   : out   std_logic_vector(7 downto 0);                     -- export
 			hex4_5_export                   : out   std_logic_vector(7 downto 0);                     -- export

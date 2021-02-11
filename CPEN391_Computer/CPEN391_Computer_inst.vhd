@@ -102,7 +102,9 @@
 			wifi_interface_txd              : out   std_logic;                                        -- txd
 			wifi_interface_cts_n            : in    std_logic                     := 'X';             -- cts_n
 			wifi_interface_rts_n            : out   std_logic;                                        -- rts_n
-			wifi_reset_export               : out   std_logic                                         -- export
+			wifi_reset_export               : out   std_logic;                                        -- export
+			bluetooth_interface_rxd         : in    std_logic                     := 'X';             -- rxd
+			bluetooth_interface_txd         : out   std_logic                                         -- txd
 		);
 	end component CPEN391_Computer;
 
@@ -210,6 +212,8 @@
 			wifi_interface_txd              => CONNECTED_TO_wifi_interface_txd,              --                     .txd
 			wifi_interface_cts_n            => CONNECTED_TO_wifi_interface_cts_n,            --                     .cts_n
 			wifi_interface_rts_n            => CONNECTED_TO_wifi_interface_rts_n,            --                     .rts_n
-			wifi_reset_export               => CONNECTED_TO_wifi_reset_export                --           wifi_reset.export
+			wifi_reset_export               => CONNECTED_TO_wifi_reset_export,               --           wifi_reset.export
+			bluetooth_interface_rxd         => CONNECTED_TO_bluetooth_interface_rxd,         --  bluetooth_interface.rxd
+			bluetooth_interface_txd         => CONNECTED_TO_bluetooth_interface_txd          --                     .txd
 		);
 

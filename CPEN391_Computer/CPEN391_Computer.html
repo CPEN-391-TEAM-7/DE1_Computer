@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2021.02.04.22:04:03</td>
+    <td class="l">2021.02.10.23:14:54</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -125,6 +125,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <br/>&#160;&#160;
      <a href="#module_bit_flipper_0"><b>bit_flipper_0</b>
      </a> bit_flipper 1.0
+     <br/>&#160;&#160;
+     <a href="#module_bluetooth_uart"><b>bluetooth_uart</b>
+     </a> altera_avalon_uart 18.1
      <br/>&#160;&#160;
      <a href="#module_pio_wifi_reset"><b>pio_wifi_reset</b>
      </a> altera_avalon_pio 18.1
@@ -1344,6 +1347,27 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="addr"><span style="color:#989898">0x</span>ff202040</td>
     <td class="addr"><span style="color:#989898">0x</span>ff202040</td>
     <td class="addr"><span style="color:#989898">0x</span>ff202040</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_bluetooth_uart"><b>bluetooth_uart</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>00000100</td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200100</td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200100</td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200100</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -20465,7 +20489,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_ARM_A9_HPS_clk_0">ARM_A9_HPS_clk_0</a>
       </td>
       <td class="from">clk_reset&#160;&#160;</td>
-      <td class="main" rowspan="225">ARM_A9_HPS_bridges</td>
+      <td class="main" rowspan="230">ARM_A9_HPS_bridges</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_sink</td>
@@ -21560,6 +21584,32 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">h2f_lw&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
        <a href="#module_pio_wifi_reset">pio_wifi_reset</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">h2f_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">h2f_lw&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_bluetooth_uart">bluetooth_uart</a>
       </td>
      </tr>
      <tr>
@@ -23329,7 +23379,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_ARM_A9_HPS_clk_0">ARM_A9_HPS_clk_0</a>
       </td>
       <td class="from">clk_reset&#160;&#160;</td>
-      <td class="main" rowspan="130">ARM_A9_HPS_arm_gic_0</td>
+      <td class="main" rowspan="133">ARM_A9_HPS_arm_gic_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_sink</td>
@@ -23964,6 +24014,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">f2h_irq_0_irq_rx_offset_40&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_wifi_uart_0">wifi_uart_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">f2h_irq_0_irq_rx_offset_40&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_bluetooth_uart">bluetooth_uart</a>
       </td>
      </tr>
      <tr>
@@ -30341,7 +30407,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_System_PLL">System_PLL</a>
       </td>
       <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="48">JTAG_To_FPGA_Bridge</td>
+      <td class="main" rowspan="51">JTAG_To_FPGA_Bridge</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -30578,6 +30644,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">master&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_pio_wifi_reset">pio_wifi_reset</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_bluetooth_uart">bluetooth_uart</a>
       </td>
      </tr>
      <tr>
@@ -32377,7 +32459,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1612505041</td>
+        <td class="parametervalue">1613027691</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -32402,7 +32484,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1612505041</td>
+        <td class="parametervalue">1613027691</td>
        </tr>
       </table>
      </td>
@@ -32566,6 +32648,210 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <tr>
      <td class="parametersbox">
       <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_bluetooth_uart"> </a>
+  <div>
+   <hr/>
+   <h2>bluetooth_uart</h2>altera_avalon_uart v18.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_ARM_A9_HPS_bridges">ARM_A9_HPS_bridges</a>
+      </td>
+      <td class="from">h2f_lw&#160;&#160;</td>
+      <td class="main" rowspan="15">bluetooth_uart</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">h2f_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_JTAG_To_FPGA_Bridge">JTAG_To_FPGA_Bridge</a>
+      </td>
+      <td class="from">master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_System_PLL">System_PLL</a>
+      </td>
+      <td class="from">sys_clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">reset_source&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_ARM_A9_HPS_arm_gic_0">ARM_A9_HPS_arm_gic_0</a>
+      </td>
+      <td class="from">f2h_irq_0_irq_rx_offset_40&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">baud</td>
+        <td class="parametervalue">38400</td>
+       </tr>
+       <tr>
+        <td class="parametername">dataBits</td>
+        <td class="parametervalue">8</td>
+       </tr>
+       <tr>
+        <td class="parametername">fixedBaud</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">parity</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">simCharStream</td>
+        <td class="parametervalue"></td>
+       </tr>
+       <tr>
+        <td class="parametername">simInteractiveInputEnable</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simInteractiveOutputEnable</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simTrueBaud</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">stopBits</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">syncRegDepth</td>
+        <td class="parametervalue">2</td>
+       </tr>
+       <tr>
+        <td class="parametername">useCtsRts</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">useEopRegister</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">useRelativePathForSimFile</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">baudError</td>
+        <td class="parametervalue">0.01</td>
+       </tr>
+       <tr>
+        <td class="parametername">parityFisrtChar</td>
+        <td class="parametervalue">N</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BAUD</td>
+        <td class="parametervalue">38400</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_BITS</td>
+        <td class="parametervalue">8</td>
+       </tr>
+       <tr>
+        <td class="parametername">FIXED_BAUD</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">PARITY</td>
+        <td class="parametervalue">'N'</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIM_CHAR_STREAM</td>
+        <td class="parametervalue">""</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIM_TRUE_BAUD</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">STOP_BITS</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">SYNC_REG_DEPTH</td>
+        <td class="parametervalue">2</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_CTS_RTS</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_EOP_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
     </tr>
    </table>
   </div>
@@ -32992,7 +33278,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <table class="blueBar">
    <tr>
     <td class="l">generation took 0.02 seconds</td>
-    <td class="r">rendering took 0.37 seconds</td>
+    <td class="r">rendering took 0.40 seconds</td>
    </tr>
   </table>
  </body>

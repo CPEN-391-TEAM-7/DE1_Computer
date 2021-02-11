@@ -158,6 +158,8 @@ module MyComputer_Verilog (
 	 wire WIFI_UART0_RTS;
 	 wire pio_wifi_reset;
 
+	 wire BLUETOOTH_RX;
+	 wire BLUETOOTH_TX;
 	 
 	 ///////////////////////////////////////////////////////////////////////////////////////
 	 // u0 is an instanace of the QSYS generated computer
@@ -268,7 +270,9 @@ module MyComputer_Verilog (
 				.wifi_interface_txd              (WIFI_UART0_TX),
 				.wifi_interface_cts_n            (WIFI_UART0_CTS),
 				.wifi_interface_rts_n            (WIFI_UART0_RTS),
-				.wifi_reset_export               (pio_wifi_reset)	
+				.wifi_reset_export               (pio_wifi_reset),
+				.bluetooth_interface_rxd         (BLUETOOTH_RX),
+		        .bluetooth_interface_txd         (BLUETOOTH_TX)	
 			);
 			
 			// Map 16 bit memory upper and lower data byte strobes to individual wires
@@ -324,17 +328,20 @@ module MyComputer_Verilog (
 			//Wifi reset.  Physical pin 2, digital pin 1
 			assign GPIO_1[1] = WIFI_RST_n;
 
-
 			//Wifi Enable, Physical pin 13, digital pin 10
 			assign GPIO_1[10] = WIFI_EN;
-
 
 			//Wifi RX,     physical pin 17, digital pin 14
 			assign WIFI_UART0_RX = GPIO_1[14];
 
-
-			//Wifi TX,     physical pin 18, digital pin 15 WARNING MAY BE BACKWARDS!
+			//Wifi TX,     physical pin 18, digital pin 15
 			assign GPIO_1[15] = WIFI_UART0_TX;
+
+			//bluetooth RX, physical pin 21, digital pin 18
+			assign BLUETOOTH_RX = GPIO_1[18];
+
+			//bluetooth TX, physical pin 22, digital pin 19
+			assign GPIO_1[19] = BLUETOOTH_TX;
 
 
 endmodule

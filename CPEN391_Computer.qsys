@@ -233,12 +233,25 @@
          type = "boolean";
       }
    }
+   element bluetooth_uart
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
    element pio_wifi_reset
    {
       datum _sortIndex
       {
          value = "19";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
       }
    }
    element wifi_uart_0
@@ -270,6 +283,11 @@
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
+ <interface
+   name="bluetooth_interface"
+   internal="bluetooth_uart.external_connection"
+   type="conduit"
+   dir="end" />
  <interface
    name="hex0_1"
    internal="HEX0_1.external_connection"
@@ -1133,6 +1151,26 @@
  </module>
  <module name="bit_flipper_0" kind="bit_flipper" version="1.0" enabled="1" />
  <module
+   name="bluetooth_uart"
+   kind="altera_avalon_uart"
+   version="18.1"
+   enabled="1">
+  <parameter name="baud" value="38400" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="dataBits" value="8" />
+  <parameter name="fixedBaud" value="false" />
+  <parameter name="parity" value="NONE" />
+  <parameter name="simCharStream" value="" />
+  <parameter name="simInteractiveInputEnable" value="false" />
+  <parameter name="simInteractiveOutputEnable" value="false" />
+  <parameter name="simTrueBaud" value="false" />
+  <parameter name="stopBits" value="1" />
+  <parameter name="syncRegDepth" value="2" />
+  <parameter name="useCtsRts" value="false" />
+  <parameter name="useEopRegister" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+ </module>
+ <module
    name="pio_wifi_reset"
    kind="altera_avalon_pio"
    version="18.1"
@@ -1317,6 +1355,15 @@
  <connection
    kind="avalon"
    version="18.1"
+   start="ARM_A9_HPS.h2f_lw_axi_master"
+   end="bluetooth_uart.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0100" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
    start="JTAG_To_FPGA_Bridge.master"
    end="IO_Bridge.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -1450,6 +1497,15 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
+   kind="avalon"
+   version="18.1"
+   start="JTAG_To_FPGA_Bridge.master"
+   end="bluetooth_uart.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0xff200100" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
    kind="clock"
    version="18.1"
    start="System_PLL.sys_clk"
@@ -1529,6 +1585,11 @@
    kind="clock"
    version="18.1"
    start="System_PLL.sys_clk"
+   end="bluetooth_uart.clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="System_PLL.sys_clk"
    end="Onchip_SRAM.clk1" />
  <connection
    kind="clock"
@@ -1584,6 +1645,13 @@
    start="ARM_A9_HPS.f2h_irq0"
    end="wifi_uart_0.irq">
   <parameter name="irqNumber" value="3" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="ARM_A9_HPS.f2h_irq0"
+   end="bluetooth_uart.irq">
+  <parameter name="irqNumber" value="4" />
  </connection>
  <connection
    kind="interrupt"
@@ -1681,6 +1749,11 @@
    kind="reset"
    version="18.1"
    start="ARM_A9_HPS.h2f_reset"
+   end="bluetooth_uart.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="ARM_A9_HPS.h2f_reset"
    end="Onchip_SRAM.reset1" />
  <connection
    kind="reset"
@@ -1767,6 +1840,11 @@
    version="18.1"
    start="System_PLL.reset_source"
    end="pio_wifi_reset.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="System_PLL.reset_source"
+   end="bluetooth_uart.reset" />
  <connection
    kind="reset"
    version="18.1"
