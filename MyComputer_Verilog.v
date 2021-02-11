@@ -334,7 +334,7 @@ module MyComputer_Verilog (
 			//Wifi RX,     physical pin 17, digital pin 14
 			assign WIFI_UART0_RX = GPIO_1[14];
 
-			//Wifi TX,     physical pin 18, digital pin 15
+			//Wifi TX,      physical pin 18, digital pin 15
 			assign GPIO_1[15] = WIFI_UART0_TX;
 
 			//bluetooth RX, physical pin 21, digital pin 18
