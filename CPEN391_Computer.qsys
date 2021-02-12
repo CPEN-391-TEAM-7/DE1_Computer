@@ -1158,7 +1158,7 @@
   <parameter name="baud" value="38400" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="dataBits" value="8" />
-  <parameter name="fixedBaud" value="false" />
+  <parameter name="fixedBaud" value="true" />
   <parameter name="parity" value="NONE" />
   <parameter name="simCharStream" value="" />
   <parameter name="simInteractiveInputEnable" value="false" />

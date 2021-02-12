@@ -1,4 +1,6 @@
 	CPEN391_Computer u0 (
+		.bluetooth_interface_rxd         (<connected-to-bluetooth_interface_rxd>),         //  bluetooth_interface.rxd
+		.bluetooth_interface_txd         (<connected-to-bluetooth_interface_txd>),         //                     .txd
 		.hex0_1_export                   (<connected-to-hex0_1_export>),                   //               hex0_1.export
 		.hex2_3_export                   (<connected-to-hex2_3_export>),                   //               hex2_3.export
 		.hex4_5_export                   (<connected-to-hex4_5_export>),                   //               hex4_5.export
@@ -101,8 +103,6 @@
 		.wifi_interface_txd              (<connected-to-wifi_interface_txd>),              //                     .txd
 		.wifi_interface_cts_n            (<connected-to-wifi_interface_cts_n>),            //                     .cts_n
 		.wifi_interface_rts_n            (<connected-to-wifi_interface_rts_n>),            //                     .rts_n
-		.wifi_reset_export               (<connected-to-wifi_reset_export>),               //           wifi_reset.export
-		.bluetooth_interface_rxd         (<connected-to-bluetooth_interface_rxd>),         //  bluetooth_interface.rxd
-		.bluetooth_interface_txd         (<connected-to-bluetooth_interface_txd>)          //                     .txd
+		.wifi_reset_export               (<connected-to-wifi_reset_export>)                //           wifi_reset.export
 	);
 

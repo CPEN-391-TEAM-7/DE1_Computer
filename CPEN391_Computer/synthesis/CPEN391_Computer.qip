@@ -2,7 +2,7 @@ set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -na
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "CPEN391_Computer" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../CPEN391_Computer.sopcinfo"]
-set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name SLD_INFO "QSYS_NAME CPEN391_Computer HAS_SOPCINFO 1 GENERATION_ID 1613027691"
+set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name SLD_INFO "QSYS_NAME CPEN391_Computer HAS_SOPCINFO 1 GENERATION_ID 1613097487"
 set_global_assignment -library "CPEN391_Computer" -name MISC_FILE [file join $::quartus(qip_path) "../CPEN391_Computer.cmp"]
 set_global_assignment -library "CPEN391_Computer" -name SLD_FILE [file join $::quartus(qip_path) "CPEN391_Computer.regmap"]
 set_global_assignment -library "CPEN391_Computer" -name MISC_FILE [file join $::quartus(qip_path) "../../C"]
@@ -18,7 +18,7 @@ set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -na
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMzAyNzY5MQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMzA5NzQ4Nw==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "CPEN391_Computer" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1278,7 +1278,7 @@ set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN39
 set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_VERSION "MTguMQ=="
 set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "YmF1ZA==::Mzg0MDA=::QmF1ZCByYXRlIChicHMp"
 set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "ZGF0YUJpdHM=::OA==::RGF0YSBiaXRz"
-set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "Zml4ZWRCYXVk::ZmFsc2U=::Rml4ZWQgYmF1ZCByYXRl"
+set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "Zml4ZWRCYXVk::dHJ1ZQ==::Rml4ZWQgYmF1ZCByYXRl"
 set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "cGFyaXR5::Tk9ORQ==::UGFyaXR5"
 set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "c2ltSW50ZXJhY3RpdmVJbnB1dEVuYWJsZQ==::ZmFsc2U=::SW50ZXJhY3RpdmUgc3RpbXVsdXMgd2luZG93"
 set_global_assignment -entity "CPEN391_Computer_bluetooth_uart" -library "CPEN391_Computer" -name IP_COMPONENT_PARAMETER "c2ltSW50ZXJhY3RpdmVPdXRwdXRFbmFibGU=::ZmFsc2U=::U3RyZWFtaW5nIG91dHB1dCB3aW5kb3c="

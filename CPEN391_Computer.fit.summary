@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Feb 10 23:36:20 2021
+Fitter Status : Successful - Thu Feb 11 21:53:59 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CPEN391_Computer
 Top-level Entity Name : MyComputer_Verilog
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 5,336 / 32,070 ( 17 % )
-Total registers : 7135
+Logic utilization (in ALMs) : 5,271 / 32,070 ( 16 % )
+Total registers : 7032
 Total pins : 309 / 457 ( 68 % )
 Total virtual pins : 0
 Total block memory bits : 35,968 / 4,065,280 ( < 1 % )

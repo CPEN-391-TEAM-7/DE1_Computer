@@ -1,5 +1,7 @@
 	component CPEN391_Computer is
 		port (
+			bluetooth_interface_rxd         : in    std_logic                     := 'X';             -- rxd
+			bluetooth_interface_txd         : out   std_logic;                                        -- txd
 			hex0_1_export                   : out   std_logic_vector(7 downto 0);                     -- export
 			hex2_3_export                   : out   std_logic_vector(7 downto 0);                     -- export
 			hex4_5_export                   : out   std_logic_vector(7 downto 0);                     -- export
@@ -102,14 +104,14 @@
 			wifi_interface_txd              : out   std_logic;                                        -- txd
 			wifi_interface_cts_n            : in    std_logic                     := 'X';             -- cts_n
 			wifi_interface_rts_n            : out   std_logic;                                        -- rts_n
-			wifi_reset_export               : out   std_logic;                                        -- export
-			bluetooth_interface_rxd         : in    std_logic                     := 'X';             -- rxd
-			bluetooth_interface_txd         : out   std_logic                                         -- txd
+			wifi_reset_export               : out   std_logic                                         -- export
 		);
 	end component CPEN391_Computer;
 
 	u0 : component CPEN391_Computer
 		port map (
+			bluetooth_interface_rxd         => CONNECTED_TO_bluetooth_interface_rxd,         --  bluetooth_interface.rxd
+			bluetooth_interface_txd         => CONNECTED_TO_bluetooth_interface_txd,         --                     .txd
 			hex0_1_export                   => CONNECTED_TO_hex0_1_export,                   --               hex0_1.export
 			hex2_3_export                   => CONNECTED_TO_hex2_3_export,                   --               hex2_3.export
 			hex4_5_export                   => CONNECTED_TO_hex4_5_export,                   --               hex4_5.export
@@ -212,8 +214,6 @@
 			wifi_interface_txd              => CONNECTED_TO_wifi_interface_txd,              --                     .txd
 			wifi_interface_cts_n            => CONNECTED_TO_wifi_interface_cts_n,            --                     .cts_n
 			wifi_interface_rts_n            => CONNECTED_TO_wifi_interface_rts_n,            --                     .rts_n
-			wifi_reset_export               => CONNECTED_TO_wifi_reset_export,               --           wifi_reset.export
-			bluetooth_interface_rxd         => CONNECTED_TO_bluetooth_interface_rxd,         --  bluetooth_interface.rxd
-			bluetooth_interface_txd         => CONNECTED_TO_bluetooth_interface_txd          --                     .txd
+			wifi_reset_export               => CONNECTED_TO_wifi_reset_export                --           wifi_reset.export
 		);
 

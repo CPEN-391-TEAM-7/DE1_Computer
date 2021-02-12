@@ -343,5 +343,8 @@ module MyComputer_Verilog (
 			//bluetooth TX, physical pin 22, digital pin 19
 			assign GPIO_1[19] = BLUETOOTH_TX;
 
+			//bluetooth work enable, physical pin 9, digital pin 8
+			assign GPIO_1[8] = KEY[1]; 
+
 
 endmodule
