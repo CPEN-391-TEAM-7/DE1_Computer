@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Feb 11 21:50:38 2021
+Analysis & Synthesis Status : Successful - Sat Mar 13 16:45:47 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CPEN391_Computer
 Top-level Entity Name : MyComputer_Verilog
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 6653
+Total registers : 27994
 Total pins : 309
 Total virtual pins : 0
 Total block memory bits : 35,968
-Total DSP Blocks : 0
+Total DSP Blocks : 3
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

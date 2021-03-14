@@ -254,6 +254,14 @@
          type = "boolean";
       }
    }
+   element rnn_0
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
    element wifi_uart_0
    {
       datum _sortIndex
@@ -1188,6 +1196,7 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
+ <module name="rnn_0" kind="rnn" version="1.0" enabled="1" />
  <module
    name="wifi_uart_0"
    kind="altera_avalon_uart"
@@ -1260,6 +1269,15 @@
    end="bit_flipper_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x2040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="ARM_A9_HPS.h2f_lw_axi_master"
+   end="rnn_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0120" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1377,6 +1395,15 @@
    end="bit_flipper_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0xff202040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="JTAG_To_FPGA_Bridge.master"
+   end="rnn_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0xff200120" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1600,6 +1627,11 @@
    kind="clock"
    version="18.1"
    start="System_PLL.sys_clk"
+   end="rnn_0.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="System_PLL.sys_clk"
    end="ARM_A9_HPS.f2h_axi_clock" />
  <connection
    kind="clock"
@@ -1758,6 +1790,11 @@
  <connection
    kind="reset"
    version="18.1"
+   start="ARM_A9_HPS.h2f_reset"
+   end="rnn_0.reset_sink" />
+ <connection
+   kind="reset"
+   version="18.1"
    start="System_PLL.reset_source"
    end="JTAG_To_HPS_Bridge.clk_reset" />
  <connection
@@ -1850,6 +1887,11 @@
    version="18.1"
    start="System_PLL.reset_source"
    end="Onchip_SRAM.reset1" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="System_PLL.reset_source"
+   end="rnn_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
