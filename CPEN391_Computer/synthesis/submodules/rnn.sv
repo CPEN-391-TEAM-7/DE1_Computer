@@ -4,7 +4,7 @@ module rnn(
 	input  logic 		rst_n,
 	input  logic 		read,
 	input  logic		write,
-	input  logic [31:0] addr,
+	input  logic [ 2:0] addr,
 	input  logic [31:0]	data_in,
 	output logic [31:0] data_out
 	);
@@ -289,6 +289,9 @@ assign mm2_start = (state == START);
 always_comb begin
 	case (addr)
 		7: half_data_out = result;				// output final result after applying dense matrix + bias
+		3: half_data_out = 16'hBEEF;
+		2: half_data_out = 16'hDEAD;
+		1: half_data_out = (state === LOAD);		
 		0: half_data_out = (state == VALID);	// check if RNN is ready to load
 		default: half_data_out = 16'b0;			// zero otherwise
 	endcase
