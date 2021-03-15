@@ -11,7 +11,6 @@ module matmul #(
 	input  logic [DATA2_COL_BITS-1:0] sel,
 
 	output logic 					  ready,
-	output logic                      busy,
 	output logic [15:0] 			  data_out,
 	output logic [DATA1_LEN_BITS-1:0] sel_vec,
 	output logic [DATA2_ROW_BITS-1:0] sel_row,
@@ -71,7 +70,7 @@ module matmul #(
 
 	always_comb begin : proc_
 		result    = data2 * data1;
-		result    = result >> 8;
+		result    = result >>> 8;
 	end
 
 	assign imm_write = (state == BUSY);
