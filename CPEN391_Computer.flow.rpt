@@ -1,5 +1,5 @@
 Flow report for CPEN391_Computer
-Sun Mar 14 18:57:29 2021
+Wed Mar 17 00:53:16 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Mar 14 18:55:35 2021       ;
+; Flow Status                     ; Successful - Wed Mar 17 00:51:37 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CPEN391_Computer                            ;
 ; Top-level Entity Name           ; MyComputer_Verilog                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 18,971 / 32,070 ( 59 % )                    ;
-; Total registers                 ; 28441                                       ;
+; Logic utilization (in ALMs)     ; 16,291 / 32,070 ( 51 % )                    ;
+; Total registers                 ; 28460                                       ;
 ; Total pins                      ; 309 / 457 ( 68 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 35,968 / 4,065,280 ( < 1 % )                ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/14/2021 18:33:47 ;
+; Start date & time ; 03/17/2021 00:33:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPEN391_Computer    ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------------------------------+------------------+-------------------------------------------+------------+
 ; Assignment Name                     ; Value                                                                          ; Default Value    ; Entity Name                               ; Section Id ;
 +-------------------------------------+--------------------------------------------------------------------------------+------------------+-------------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1097599811581.161577202117904                                                  ; --               ; --                                        ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1097599811581.161596641618112                                                  ; --               ; --                                        ; --         ;
 ; HPS_ISW_FILE                        ; CPEN391_Computer/synthesis/submodules/sequencer/alt_types.pre.h                ; --               ; CPEN391_Computer_ARM_A9_HPS_hps_io_border ; --         ;
 ; HPS_ISW_FILE                        ; CPEN391_Computer/synthesis/submodules/sequencer/emif.pre.xml                   ; --               ; CPEN391_Computer_ARM_A9_HPS_hps_io_border ; --         ;
 ; HPS_ISW_FILE                        ; CPEN391_Computer/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --               ; CPEN391_Computer_ARM_A9_HPS_hps_io_border ; --         ;
@@ -119,7 +119,7 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                          ; --               ; --                                        ; --         ;
 ; SLD_FILE                            ; CPEN391_Computer/synthesis/CPEN391_Computer.regmap                             ; --               ; --                                        ; --         ;
 ; SLD_FILE                            ; CPEN391_Computer/synthesis/CPEN391_Computer.debuginfo                          ; --               ; --                                        ; --         ;
-; SLD_INFO                            ; QSYS_NAME CPEN391_Computer HAS_SOPCINFO 1 GENERATION_ID 1615771904             ; --               ; --                                        ; --         ;
+; SLD_INFO                            ; QSYS_NAME CPEN391_Computer HAS_SOPCINFO 1 GENERATION_ID 1615966292             ; --               ; --                                        ; --         ;
 ; SOPCINFO_FILE                       ; CPEN391_Computer/synthesis/../../CPEN391_Computer.sopcinfo                     ; --               ; --                                        ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                             ; --               ; --                                        ; --         ;
 ; TOP_LEVEL_ENTITY                    ; MyComputer_Verilog                                                             ; CPEN391_Computer ; --                                        ; --         ;
@@ -131,11 +131,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:12     ; 1.7                     ; 5572 MB             ; 00:03:40                           ;
-; Fitter               ; 00:15:41     ; 1.2                     ; 8202 MB             ; 00:26:39                           ;
-; Assembler            ; 00:00:33     ; 1.0                     ; 5194 MB             ; 00:00:32                           ;
-; Timing Analyzer      ; 00:01:52     ; 2.2                     ; 6373 MB             ; 00:03:28                           ;
-; Total                ; 00:20:18     ; --                      ; --                  ; 00:34:19                           ;
+; Analysis & Synthesis ; 00:02:16     ; 1.7                     ; 5572 MB             ; 00:03:41                           ;
+; Fitter               ; 00:11:41     ; 1.3                     ; 8171 MB             ; 00:21:34                           ;
+; Assembler            ; 00:00:30     ; 1.0                     ; 5167 MB             ; 00:00:28                           ;
+; Timing Analyzer      ; 00:01:38     ; 2.1                     ; 6337 MB             ; 00:03:06                           ;
+; Total                ; 00:16:05     ; --                      ; --                  ; 00:28:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
